@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jardinerie – Au Temple des Lilas</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #000;
+        color: #e4ebe0;
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: radial-gradient(
+            circle at 20% 30%,
+            rgba(0, 212, 255, 0.1) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(122, 168, 129, 0.1) 0%,
+            transparent 40%
+          );
+        filter: blur(80px);
+      }
+
+      h2,
+      h3 {
+        color: #00d4ff;
+        text-align: center;
+      }
+
+      .content {
+        padding: 100px 20px;
+      }
+
+      .engagement-section {
+        max-width: 1200px;
+        margin: 0 auto 100px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      .images {
+        position: relative;
+        flex: 1 1 400px;
+        max-width: 500px;
+      }
+
+      .img-primary {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+        position: relative;
+        z-index: 1;
+      }
+
+      .img-overlay {
+        position: absolute;
+        width: 60%;
+        bottom: -40px;
+        right: -40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+        z-index: 2;
+      }
+
+      .engagement-text {
+        flex: 1 1 400px;
+        max-width: 600px;
+      }
+
+      .engagement-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #c8d7c3;
+        text-align: justify;
+        margin-bottom: 20px;
+      }
+
+      /* Carousel */
+      .carousel-section {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .carousel-section h3 {
+        font-size: 2rem;
+        color: #00d4ff;
+        margin-bottom: 30px;
+      }
+
+      .carousel-container {
+        overflow: hidden;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+
+      .carousel-track {
+        display: flex;
+        gap: 20px;
+        animation: scrollCarousel 25s linear infinite;
+      }
+
+      .carousel-track img {
+        flex: 0 0 auto;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .carousel-track img:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes scrollCarousel {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="not-loaded">
+    <div id="header-placeholder"></div>
+
+    <main class="content">
+      <h2>Jardinerie</h2>
+
+      <!-- 🌱 Bloc engrais et accessoires -->
+      <section class="engagement-section">
+        <div class="images images-left">
+          <img src="images/j1.png" class="img-primary" />
+          <img src="images/j2.png" class="img-overlay" />
+        </div>
+        <div class="engagement-text">
+          <h3>Engrais et terreaux</h3>
+          <p>
+            Vous trouverez au Temple des Lilas, du terreau professionnel, ou du
+            terreau enrichi d’engrais de très grande qualité. Mais vous
+            découvrirez aussi des engrais BIO, pour nourrir vos plants et
+            améliorer le rendement de vos cultures. Laissez-vous conseiller lors
+            de votre visite aux serres !
+          </p>
+          <h3>Accessoires, outillage, équipement</h3>
+          <p>
+            Vous trouverez un vaste choix de matériel et accessoires pour
+            jardiner. Chaussures, gants, arrosoirs, outils, mobilier de jardin,
+            jeux pour enfants… Une offre qui se renouvelle en permanence afin de
+            répondre à toutes vos attentes.
+          </p>
+        </div>
+      </section>
+
+      <!-- 🎠 Carrousel -->
+      <section class="carousel-section">
+        <h3>Nos produits en images</h3>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <img src="images/j3.png" alt="Produit 1" />
+            <img src="images/j4.png" alt="Produit 2" />
+            <img src="images/j5.png" alt="Produit 3" />
+            <img src="images/j6.png" alt="Produit 4" />
+            <img src="images/j7.png" alt="Produit 5" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

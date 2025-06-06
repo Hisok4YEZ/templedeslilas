@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Au Temple des Lilas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body class="not-loaded">
+    <div id="header-placeholder"></div>
+
+    <section class="contact-section reveal-on-scroll">
+      <div class="contact-wrapper">
+        <h1>Contactez-nous</h1>
+        <p>Nous serons ravis de vous répondre au plus vite.</p>
+
+        <form
+          action="https://formspree.io/f/xyzwrwrg"
+          method="POST"
+          class="contact-form"
+        >
+          <label>Votre nom</label>
+          <input type="text" name="name" required />
+
+          <label>Votre adresse e-mail</label>
+          <input type="email" name="email" required />
+
+          <label>Votre message</label>
+          <textarea name="message" rows="5" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
