@@ -1044,8 +1044,7 @@ body {
     }
 
     .plant-block,
-    .engagement-block,
-    .footer-grid {
+    .engagement-block{
         flex-direction: column !important;
         align-items: stretch;
         padding: 1rem;
@@ -1100,10 +1099,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .footer-block {
-        max-width: 100%;
-        text-align: center;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -1229,5 +1225,22 @@ body {
         padding: 0.8rem 1.5rem;
         height: auto;
 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: flex-start;
+        gap: 1.5rem;
+        text-align: left;
+    }
+
+    .footer-block.center {
+        grid-column: span 2;
+        justify-content: center;
+        text-align: center;
     }
 }
